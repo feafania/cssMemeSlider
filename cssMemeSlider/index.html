@@ -2,13 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CSS Meme Slider</title>
-    <div   >Hello, word!</div>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/svg/favicon.ico">
 </head>
 <body>
+    <header class="header">
+        <div class="container container-header">
+        </div>
+    </header>
+    <main class="main">
+        <div class="container container-main">
+            <div class="slider">
 
+                <input type="radio" id="slide4" name="slider-control">
+                <div class="navigation">
+                    <label for="slide4" class="navigation-button"></label>
+                </div>
+                <input type="radio" id="slide3" name="slider-control">
+                <div class="navigation">
+                    <label for="slide3" class="navigation-button"></label>
+                </div>
+                <input type="radio" id="slide2" name="slider-control">
+                <div class="navigation">
+                    <label for="slide2" class="navigation-button"></label>
+                </div>
+                <input type="radio" id="slide1" name="slider-control" checked>
+                <div class="navigation">
+                    <label for="slide1" class="navigation-button"></label>
+                </div>
+                <div class="slides-names">
+                    <div class="slide-name" id="slide-name-1">
+                        <p>A cool guide every cat owner should know about</p>
+                    </div>
+                    <div class="slide-name" id="slide-name-2">
+                        <p>A cool guide on how to tell if your cat is in pain</p>
+                    </div>
+                    <div class="slide-name" id="slide-name-3">
+                        <p>A cool guide to cat breeds</p>
+                    </div>
+                    <div class="slide-name" id="slide-name-4">
+                        <p>Beware guard cat on duty</p>
+                    </div>
+                </div>
+                <div class="slides">
+                    <div class="slide" id="slide-img-1">
+                        <img src="./assets/img/a-cool-guide-every-cat-owner-should-know-about.webp" alt="Every cat owner should to know about">
+                    </div>
+                    <div class="slide" id="slide-img-2">
+                        <img src="./assets/img/a-cool-guide-on-how-to-tell-if-your-cat-is-in-pain.webp" alt="How to tell if your cat is in pain">
+                    </div>
+                    <div class="slide" id="slide-img-3">
+                        <img src="./assets/img/a-cool-guide-to-cat-breeds.webp" alt="Guide to cat breeds">
+                    </div>
+                    <div class="slide" id="slide-img-4">
+                        <img src="./assets/img/beware-guard-cat-on-duty.webp" alt="Guard cat on duty">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer class="header">
+        <div class="container container-footer">
+        </div>
+    </footer>
 </body>
 </html>
