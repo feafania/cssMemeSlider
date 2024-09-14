@@ -45,7 +45,7 @@ body {
 .main {
     height: 100vh;
 }
-
+/*Main sleder*/
 .slider {
     width: 100%;
     max-width: 90%;
@@ -113,7 +113,7 @@ body {
     margin: 0;
     padding: 0;
 }
-
+/*Navigation*/
 .navigation {
     display: flex;
     justify-content: flex-end;
@@ -177,6 +177,7 @@ body {
     transition: all 0.3s ease;
 }
 
+/*Controls*/
 
 input[type="radio"]:checked + .navigation .navigation-button .navigation-button-control {
     background-color: transparent;
@@ -229,6 +230,7 @@ input[type="radio"] {
     transform: translateX(-100%);
 }
 
+/*Mobile version*/
 
 @media (max-width: 768px) {
     body {
