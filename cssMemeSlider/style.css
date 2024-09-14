@@ -39,7 +39,7 @@ body {
 .container {
     max-width: 1440px;
     min-width: 320px;
-    margin: 0;
+    margin: 0 auto;
     background-color:var(--main-background-color);
 }
 .main {
@@ -120,12 +120,29 @@ body {
     width: 3%;
     transition: transform 0.5s ease;
     height: 25%;
-    padding: 5vh 0 0;
+    padding: 3vh 0 0;
     flex-grow: 0;
     order: 2;
 }
 
 .navigation-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2vh 0 0;
+
+}
+.navigation-button:hover,
+.navigation-button:focus
+{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.navigation-button-control {
     cursor: pointer;
     width: 1rem;
     height: 1rem;
@@ -138,14 +155,14 @@ body {
     transition: all 0.3s ease;
 }
 
-.navigation-button:hover,
-.navigation-button:focus
+.navigation-button-control:hover,
+.navigation-button-control:focus
 {
     cursor: pointer;
     width: 1rem;
     height: 1rem;
     margin: 0 0 0 1vh;
-    padding: 0;
+    /*padding: 0;*/
     background-color: var(--main-color);
     border: none;
     border-radius: 50%;
@@ -153,7 +170,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.navigation-button:active {
+.navigation-button-control:active {
     background-color: rgba(var(--main-background-color), 0.5);
     border: 2px solid var(--button-color);
     transform: scale(0.95);
@@ -161,17 +178,17 @@ body {
 }
 
 
-input[type="radio"]:checked + .navigation .navigation-button {
+input[type="radio"]:checked + .navigation .navigation-button .navigation-button-control {
     background-color: transparent;
     border: 2px solid var(--button-color);
 }
 
-input[type="radio"]:checked + .navigation .navigation-button:hover,
-input[type="radio"]:checked + .navigation .navigation-button:focus {
+input[type="radio"]:checked + .navigation .navigation-button:hover .navigation-button-control,
+input[type="radio"]:checked + .navigation .navigation-button:focus .navigation-button-control {
     border: 2px solid var(--main-color);
 }
 
-input[type="radio"]:checked + .navigation .navigation-button:active {
+input[type="radio"]:checked + .navigation .navigation-button:active .navigation-button-control{
     background-color: transparent;
     border: 2px solid var(--main-color);
     transform: scale(0.95);
@@ -191,6 +208,7 @@ input[type="radio"] {
 #slide2:checked ~ .slides-names .slide-name:nth-child(2),
 #slide2:checked ~ .slides .slide:nth-child(2)
 {
+
     transform: translateX(-100%);
 }
 
@@ -205,6 +223,12 @@ input[type="radio"] {
 {
     transform: translateX(-300%);
 }
+
+#slide1:not(:checked) ~ .slides-names .slide-name:nth-child(1),
+#slide1:not(:checked) ~ .slides .slide:nth-child(1) {
+    transform: translateX(-100%);
+}
+
 
 @media (max-width: 768px) {
     body {
@@ -226,23 +250,26 @@ input[type="radio"] {
     }
 
     .slides {
-        height: 80%;
+        height: 75%;
         padding-top: 10%;
+        flex-grow: 1;
     }
 
     .slides-names {
         width: 95%;
-        height: 10%;
-        align-items: end;
+
+        align-items: start;
         padding-bottom: 5%;
+        flex-grow: 0;
     }
 
     .navigation {
         width: 7%;
         justify-content: center;
         align-items: end;
-        height: 10%;
-        padding-bottom: 5%;
+        flex-grow: 0;
+        height: fit-content;
+
     }
 
     .navigation-button {
